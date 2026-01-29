@@ -3,7 +3,7 @@ CASES = {"00":"Do nothing","01":"Flip (X)","10":"Twist (Z)","11":"Flip then Twis
 
 def make(outdir="teleport_class_set", pairs=12):
     os.makedirs(outdir, exist_ok=True)
-    with open(os.path.join(outdir,"_TEACHER_SUMMARY.txt"),"w") as t:
+    with open(os.path.join(outdir,"_TEACHER_SUMMARY.txt"),"w", encoding="utf-8") as t:
         t.write("Teleportation case legend:\n")
         for k,v in CASES.items(): t.write(f"  {k} → {v}\n")
     for i in range(1, pairs+1):
